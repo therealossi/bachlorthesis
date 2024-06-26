@@ -1,0 +1,75 @@
+Start testing: May 16 13:34 CEST
+----------------------------------------------------------
+1/2 Testing: bufferpool_test
+1/2 Test: bufferpool_test
+Command: "/home/ossi/Github/poseidon_bufferpool/build/bufferpool_test"
+Directory: /home/ossi/Github/poseidon_bufferpool/build
+"bufferpool_test" start time: May 16 13:34 CEST
+Output:
+----------------------------------------------------------
+Randomness seeded to: 576564686
+0
+1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+bufferpool_test is a Catch2 v3.5.2 host application.
+Run with -? for options
+
+-------------------------------------------------------------------------------
+Creating a bufferpool
+-------------------------------------------------------------------------------
+/home/ossi/Github/poseidon_bufferpool/test/bufferpool_test.cpp:22
+...............................................................................
+
+/home/ossi/Github/poseidon_bufferpool/test/bufferpool_test.cpp:22: FAILED:
+due to a fatal error condition:
+  SIGSEGV - Segmentation violation signal
+
+===============================================================================
+test cases: 1 | 1 failed
+assertions: 1 | 1 failed
+
+<end of output>
+Test time =   7.34 sec
+----------------------------------------------------------
+Test Failed.
+"bufferpool_test" end time: May 16 13:34 CEST
+"bufferpool_test" time elapsed: 00:00:07
+----------------------------------------------------------
+
+2/2 Testing: paged_file_test
+2/2 Test: paged_file_test
+Command: "/home/ossi/Github/poseidon_bufferpool/build/paged_file_test"
+Directory: /home/ossi/Github/poseidon_bufferpool/build
+"paged_file_test" start time: May 16 13:34 CEST
+Output:
+----------------------------------------------------------
+Randomness seeded to: 1483024452
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+paged_file_test is a Catch2 v3.5.2 host application.
+Run with -? for options
+
+-------------------------------------------------------------------------------
+Creating a paged file
+-------------------------------------------------------------------------------
+/home/ossi/Github/poseidon_bufferpool/test/paged_file_test.cpp:8
+...............................................................................
+
+/home/ossi/Github/poseidon_bufferpool/test/paged_file_test.cpp:8: FAILED:
+due to a fatal error condition:
+  SIGSEGV - Segmentation violation signal
+
+===============================================================================
+test cases: 1 | 1 failed
+assertions: 1 | 1 failed
+
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Failed.
+"paged_file_test" end time: May 16 13:34 CEST
+"paged_file_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 16 13:34 CEST

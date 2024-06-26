@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbuffermanager.a CMakeFiles/buffermanager.dir/src/bufferpool.cpp.o "CMakeFiles/buffermanager.dir/src/paged_file_iouring-new.cpp.o" CMakeFiles/buffermanager.dir/src/lru_list.cpp.o
+/usr/bin/ranlib libbuffermanager.a
