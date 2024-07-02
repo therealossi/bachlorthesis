@@ -9,7 +9,7 @@ TEST_CASE("Creating a paged file", "[paged_file]") {
     remove("test.dat");
     paged_file pf;
 
-    pf.open("test.dat");
+    pf.open_("test.dat");
     REQUIRE(pf.is_open());
     auto pid = pf.allocate_page();
     REQUIRE(pid == 1);
@@ -32,7 +32,7 @@ TEST_CASE("Creating a larger paged file", "[paged_file]") {
     {
         paged_file pf;
         
-        pf.open("test2.dat");
+        pf.open_("test2.dat");
         REQUIRE(pf.is_open());
         for (auto i = 0u; i < 100; i++)
             pf.allocate_page();
@@ -46,7 +46,7 @@ TEST_CASE("Creating a larger paged file", "[paged_file]") {
     {
         paged_file pf;
         
-        pf.open("test2.dat");
+        pf.open_("test2.dat");
         REQUIRE(pf.is_open());
         REQUIRE(pf.num_pages() == 100);
         page p2;
@@ -55,7 +55,7 @@ TEST_CASE("Creating a larger paged file", "[paged_file]") {
         for (auto i = 0u; i < PF_PAGE_SIZE; i++)
             if (p2.payload[i] == 0xcc)
                 n++;
-        REQUIRE(n == PF_PAGE_SIZE);
+        REQUIRE(n == PF_PAGE_SIZE); 
         pf.close_file();
     }
     remove("test2.dat");
@@ -66,7 +66,7 @@ TEST_CASE("Creating another larger paged file", "[paged_file]") {
     {
         paged_file pf;
         
-        pf.open("test3.dat");
+        pf.open_("test3.dat");
         REQUIRE(pf.is_open());
         for (auto i = 0u; i < 100; i++)
             pf.allocate_page();
@@ -84,7 +84,7 @@ TEST_CASE("Creating another larger paged file", "[paged_file]") {
     {
         paged_file pf;
         
-        pf.open("test3.dat");
+        pf.open_("test3.dat");
         REQUIRE(pf.is_open());
         REQUIRE(pf.num_pages() == 100);
         page p2;
@@ -108,7 +108,7 @@ TEST_CASE("Creating a paged file and delete some pages", "[paged_file]") {
     remove("test4.dat");
         paged_file pf;
         
-        pf.open("test4.dat");
+        pf.open_("test4.dat");
         REQUIRE(pf.is_open());
         for (auto i = 0u; i < 100; i++)
             pf.allocate_page();
@@ -137,7 +137,7 @@ TEST_CASE("Checking last valid page", "[paged_file]") {
     remove("test5.dat");
     paged_file pf;
     
-    pf.open("test5.dat");
+    pf.open_("test5.dat");
     REQUIRE(pf.is_open());
 
     REQUIRE(pf.last_valid_page() == 1);
@@ -156,7 +156,7 @@ TEST_CASE("Reusing free page slots", "[paged_file]") {
     remove("test6.dat");
     paged_file pf;
     
-    pf.open("test6.dat");
+    pf.open_("test6.dat");
     REQUIRE(pf.is_open());
     
     for (auto i = 0u; i < 5; i++)
@@ -171,3 +171,4 @@ TEST_CASE("Reusing free page slots", "[paged_file]") {
     REQUIRE(pf.num_pages() == 5);
     remove("test6.dat");
 }
+

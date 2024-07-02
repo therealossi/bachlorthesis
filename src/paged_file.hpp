@@ -78,14 +78,13 @@ public:
      * Open or create the file with the given name and file type. If the file doesn't exist
      * a new file is created.
      */
-    bool open(const std::string& path, int file_type = 0);
+    bool open_(const std::string& path, int file_type = 0);
 
     /**
      * Return true if the file is open.
      */
     bool is_open() { 
-        int flags =fcntl(file_,F_GETFL);
-        return flags!=-1;//file_.is_open(); 
+        return file_; 
     }
 
     /**
