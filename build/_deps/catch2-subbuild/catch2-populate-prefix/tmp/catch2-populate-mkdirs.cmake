@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-src"
-  "/home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-build"
-  "/home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-subbuild/catch2-populate-prefix"
-  "/home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-subbuild/catch2-populate-prefix/tmp"
-  "/home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp"
-  "/home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-subbuild/catch2-populate-prefix/src"
-  "/home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp"
+  "/home/ossi/Github/bachlorthesis/build/_deps/catch2-src"
+  "/home/ossi/Github/bachlorthesis/build/_deps/catch2-build"
+  "/home/ossi/Github/bachlorthesis/build/_deps/catch2-subbuild/catch2-populate-prefix"
+  "/home/ossi/Github/bachlorthesis/build/_deps/catch2-subbuild/catch2-populate-prefix/tmp"
+  "/home/ossi/Github/bachlorthesis/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp"
+  "/home/ossi/Github/bachlorthesis/build/_deps/catch2-subbuild/catch2-populate-prefix/src"
+  "/home/ossi/Github/bachlorthesis/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/ossi/Github/bachlorthesis/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/ossi/Github/bachlorthesis/build/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -1,4 +1,4 @@
-# Install script for directory: /home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-src
+# Install script for directory: /home/ossi/Github/bachlorthesis/build/_deps/catch2-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-build/src/cmake_install.cmake")
+  include("/home/ossi/Github/bachlorthesis/build/_deps/catch2-build/src/cmake_install.cmake")
 
 endif()
 

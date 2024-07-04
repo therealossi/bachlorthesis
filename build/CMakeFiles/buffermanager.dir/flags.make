@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ossi/Github/poseidon_bufferpool -I/home/ossi/Github/poseidon_bufferpool/src -I/home/ossi/Github/poseidon_bufferpool/build/_deps/liburing4cpp-src/include
+CXX_INCLUDES = -I/home/ossi/Github/bachlorthesis -I/home/ossi/Github/bachlorthesis/src -I/home/ossi/Github/bachlorthesis/build/_deps/liburing4cpp-src/include
 
 CXX_FLAGS = -std=gnu++20 -fcoroutines
 

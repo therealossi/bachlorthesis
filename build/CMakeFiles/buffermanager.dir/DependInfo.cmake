@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ossi/Github/poseidon_bufferpool/src/bufferpool.cpp" "CMakeFiles/buffermanager.dir/src/bufferpool.cpp.o" "gcc" "CMakeFiles/buffermanager.dir/src/bufferpool.cpp.o.d"
-  "/home/ossi/Github/poseidon_bufferpool/src/lru_list.cpp" "CMakeFiles/buffermanager.dir/src/lru_list.cpp.o" "gcc" "CMakeFiles/buffermanager.dir/src/lru_list.cpp.o.d"
-  "/home/ossi/Github/poseidon_bufferpool/src/paged_file_iouring-new.cpp" "CMakeFiles/buffermanager.dir/src/paged_file_iouring-new.cpp.o" "gcc" "CMakeFiles/buffermanager.dir/src/paged_file_iouring-new.cpp.o.d"
+  "/home/ossi/Github/bachlorthesis/src/bufferpool.cpp" "CMakeFiles/buffermanager.dir/src/bufferpool.cpp.o" "gcc" "CMakeFiles/buffermanager.dir/src/bufferpool.cpp.o.d"
+  "/home/ossi/Github/bachlorthesis/src/lru_list.cpp" "CMakeFiles/buffermanager.dir/src/lru_list.cpp.o" "gcc" "CMakeFiles/buffermanager.dir/src/lru_list.cpp.o.d"
+  "/home/ossi/Github/bachlorthesis/src/paged_file_iouring-new.cpp" "CMakeFiles/buffermanager.dir/src/paged_file_iouring-new.cpp.o" "gcc" "CMakeFiles/buffermanager.dir/src/paged_file_iouring-new.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

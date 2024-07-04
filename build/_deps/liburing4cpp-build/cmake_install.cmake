@@ -1,4 +1,4 @@
-# Install script for directory: /home/ossi/Github/poseidon_bufferpool/build/_deps/liburing4cpp-src
+# Install script for directory: /home/ossi/Github/bachlorthesis/build/_deps/liburing4cpp-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

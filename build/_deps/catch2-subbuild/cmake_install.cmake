@@ -1,4 +1,4 @@
-# Install script for directory: /home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-subbuild
+# Install script for directory: /home/ossi/Github/bachlorthesis/build/_deps/catch2-subbuild
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-subbuild/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ossi/Github/bachlorthesis/build/_deps/catch2-subbuild/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ossi/Github/poseidon_bufferpool/test/bufferpool_test.cpp" "CMakeFiles/bufferpool_test.dir/test/bufferpool_test.cpp.o" "gcc" "CMakeFiles/bufferpool_test.dir/test/bufferpool_test.cpp.o.d"
+  "/home/ossi/Github/bachlorthesis/test/bufferpool_test.cpp" "CMakeFiles/bufferpool_test.dir/test/bufferpool_test.cpp.o" "gcc" "CMakeFiles/bufferpool_test.dir/test/bufferpool_test.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

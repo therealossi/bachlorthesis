@@ -1,4 +1,4 @@
-# Install script for directory: /home/ossi/Github/poseidon_bufferpool/build/_deps/catch2-src/src
+# Install script for directory: /home/ossi/Github/bachlorthesis/build/_deps/catch2-src/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
