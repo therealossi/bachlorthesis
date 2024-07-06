@@ -161,8 +161,8 @@ CMakeFiles/buffermanager.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/bufferpool_test.dir/all: CMakeFiles/buffermanager.dir/all
-CMakeFiles/bufferpool_test.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all
 CMakeFiles/bufferpool_test.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2.dir/all
+CMakeFiles/bufferpool_test.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bufferpool_test.dir/build.make CMakeFiles/bufferpool_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bufferpool_test.dir/build.make CMakeFiles/bufferpool_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ossi/Github/bachlorthesis/build/CMakeFiles --progress-num=97,98 "Built target bufferpool_test"
@@ -189,8 +189,8 @@ CMakeFiles/bufferpool_test.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/paged_file_test.dir/all: CMakeFiles/buffermanager.dir/all
-CMakeFiles/paged_file_test.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all
 CMakeFiles/paged_file_test.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2.dir/all
+CMakeFiles/paged_file_test.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged_file_test.dir/build.make CMakeFiles/paged_file_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/paged_file_test.dir/build.make CMakeFiles/paged_file_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ossi/Github/bachlorthesis/build/CMakeFiles --progress-num=99,100 "Built target paged_file_test"
