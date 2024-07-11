@@ -65,6 +65,6 @@ endforeach()
 
 
 # # Benchmarks
-# add_executable(bench bench/main.cpp)
-# target_link_libraries(bench buffermanager liburing4cpp)  
+add_executable(bench bench/time.cpp bench/dbutils.cpp bench/benchmarksCreate.cpp)
+target_link_libraries(bench buffermanager liburing4cpp)  
    
