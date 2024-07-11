@@ -18,7 +18,7 @@ std::vector<benchmark_result>* benchmarkAllocatePage(){
 
     std::cout<<"Made file"<<std::endl;
 
-    bench_file->open("benchdir/benches.db", 0);
+    bench_file->open_("benchdir/benches.db", 0);
 
     std::cout<<"Created dbFile"<<std::endl;
 
@@ -62,7 +62,7 @@ std::vector<benchmark_result>* benchmarkAllocateAndWriteAllPages(){
 
     std::cout << "Made file" << std::endl;
 
-    bench_file->open("benchdir/benches.db", 0);
+    bench_file->open_("benchdir/benches.db", 0);
 
     std::cout << "Created dbFile" << std::endl;
 
@@ -110,7 +110,7 @@ std::vector<benchmark_result>* benchmarkAllocateWriteDeletePages(){
 
     std::cout << "Made file" << std::endl;
 
-    bench_file->open("benchdir/benches.db", 0);
+    bench_file->open_("benchdir/benches.db", 0);
 
     std::cout << "Created dbFile" << std::endl;
 
@@ -170,7 +170,7 @@ std::vector<benchmark_result>* benchmarkDeleteAllPages(){
 
     std::cout << "Made file" << std::endl;
 
-    bench_file->open("benchdir/benches.db", 0);
+    bench_file->open_("benchdir/benches.db", 0);
 
     std::cout << "Created dbFile" << std::endl;
 
@@ -211,7 +211,7 @@ std::vector<benchmark_result>* benchmarkAllocateWriteReadPages(){
 
     std::cout << "Made file" << std::endl;
 
-    bench_file->open("benchdir/benches.db", 0);
+    bench_file->open_("benchdir/benches.db", 0);
 
     std::cout << "Created dbFile" << std::endl;
 
@@ -273,7 +273,7 @@ std::vector<benchmark_result>* benchmarkAllocateWriteReadDeletePages(){
 
     std::cout << "Made file" << std::endl;
 
-    bench_file->open("benchdir/benches.db", 0);
+    bench_file->open_("benchdir/benches.db", 0);
 
     std::cout << "Created dbFile" << std::endl;
 
@@ -340,7 +340,7 @@ std::vector<benchmark_result>* benchmarkAllocateWriteReadWriteReadPages(){
 
     std::cout << "Made file" << std::endl;
 
-    bench_file->open("benchdir/benches.db", 0);
+    bench_file->open_("benchdir/benches.db", 0);
 
     std::cout << "Created dbFile" << std::endl;
 
@@ -424,7 +424,7 @@ std::vector<benchmark_result>* benchmarkReadAllPages(){
 
     std::cout << "Made file" << std::endl;
 
-    bench_file->open("benchdir/benches.db", 0);
+    bench_file->open_("benchdir/benches.db", 0);
 
     std::cout << "Created dbFile" << std::endl;
 
@@ -480,7 +480,7 @@ std::vector<benchmark_result>* benchmarkReadAndDeleteAllPages(){
 
     std::cout << "Made file" << std::endl;
 
-    bench_file->open("benchdir/benches.db", 0);
+    bench_file->open_("benchdir/benches.db", 0);
 
     std::cout << "Created dbFile" << std::endl;
 
@@ -527,7 +527,7 @@ std::vector<benchmark_result>* benchmarkWriteAllPages(){
 
     std::cout << "Made file" << std::endl;
 
-    bench_file->open("benchdir/benches.db", 0);
+    bench_file->open_("benchdir/benches.db", 0);
 
     std::cout << "Created dbFile" << std::endl;
 
