@@ -29,9 +29,9 @@ int main(){
     if (bmData!=nullptr){
         for(benchmark_result res:(*bmData)){
             if(res.data!=nullptr){
-                outFile<<res.data<<":";
+                outFile<<*(res.data)<<":";
             }
-            outFile<<res.value<<",";
+            outFile<<res.value<<"s,";
         }
         outFile<<std::endl;
     }else{
