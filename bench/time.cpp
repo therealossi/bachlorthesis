@@ -12,7 +12,7 @@
 using namespace std;
 using namespace std::chrono;
 
-void print_benchmark(std::vector<benchmark_result>* bmData){
+void print_benchmark(std::vector<benchmark_result>* bmData, std::offstream outFile){
     if (bmData!=nullptr){
         for(benchmark_result res:(*bmData)){
             if(res.data!=nullptr){
@@ -36,10 +36,10 @@ int main(){
         return 1;
     }
     std::cout<<"Outfile created"<<std::endl;
-    print_benchmark(benchmarkAllocatePage());
-    print_benchmark(benchmarkAllocateAndWriteAllPages());
-    print_benchmark(benchmarkDeleteAllPages());
-    print_benchmark(benchmarkAllocateWriteDeletePages());
+    print_benchmark(benchmarkAllocatePage(),outFile);
+    print_benchmark(benchmarkAllocateAndWriteAllPages(),outFile);
+    print_benchmark(benchmarkDeleteAllPages(),outFile);
+    print_benchmark(benchmarkAllocateWriteDeletePages(),outFile);
 
     /*auto bmData=benchmarkAllocatePage();
     std::cout<<"Benchmark run"<<std::endl;
