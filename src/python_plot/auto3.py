@@ -41,6 +41,6 @@ def plot_data(data_sets, output_dir):
 
 if __name__ == '__main__':
     file_path = '/home/ossi/github/bachlorthesis/build/benchmark.txt'
-    output_dir = 'pic'
+    output_dir = 'pic-barplot'
     data_sets = read_data(file_path)
     plot_data(data_sets, output_dir)

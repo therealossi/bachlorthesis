@@ -27,11 +27,11 @@ def plot_data(data_sets, output_dir):
         labels, values = zip(*operations_items)
         
         plt.plot(labels, values)
-        plt.title(f'Operation Times for Dataset {idx + 1}', fontsize=20)
-        plt.xlabel('Operations', fontsize=16)
-        plt.ylabel('Time (s)', fontsize=16)
-        plt.xticks(rotation=45, fontsize=14)
-        plt.yticks(fontsize=14)
+        plt.title(f'Operation Times for Dataset {idx + 1}', fontsize=24)
+        plt.xlabel('Operations', fontsize=24)
+        plt.ylabel('Time (s)', fontsize=24)
+        plt.xticks(rotation=45, fontsize=20)
+        plt.yticks(fontsize=20)
         plt.grid(axis='y')
         plt.tight_layout()  # Ensure everything fits without overlap
 
@@ -41,6 +41,6 @@ def plot_data(data_sets, output_dir):
 
 if __name__ == '__main__':
     file_path = '/home/ossi/github/bachlorthesis/build/benchmark.txt'
-    output_dir = 'pics'
+    output_dir = 'pic-lineplot'
     data_sets = read_data(file_path)
     plot_data(data_sets, output_dir)

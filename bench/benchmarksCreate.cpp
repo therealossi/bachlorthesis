@@ -343,6 +343,8 @@ std::vector<benchmark_result>* benchmarkAllocateWriteReadWriteReadPages(){
     bench_file->open_("benchdir/benches.db", 0);
 
     std::cout << "Created dbFile" << std::endl;
+    
+
 
     auto start = std::chrono::high_resolution_clock::now();
     auto mid = std::chrono::high_resolution_clock::now();
@@ -410,6 +412,7 @@ std::vector<benchmark_result>* benchmarkAllocateWriteReadWriteReadPages(){
     std::chrono::duration<double> duration = std::chrono::high_resolution_clock::now() - start;
     recordTime(ret,&start,"Total");
     std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;
+    
 
     return ret;
 }
