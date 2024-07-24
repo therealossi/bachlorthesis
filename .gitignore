@@ -1,0 +1,12 @@
+# Ignoriere alle Dateien im Verzeichnis "build"
+build/
+
+# Füge alle Dateien aus dem Verzeichnis "pic" hinzu
+pic/*
+pic-lineplot*
+comparison_plots*
+# Ignoriere alle Dateien mit der Erweiterung ".log"
+*.log
+
+# Ignoriere die Datei "credentials.txt"
+credentials.txt
