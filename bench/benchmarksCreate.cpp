@@ -1,26 +1,30 @@
 #include "benchmarksCreate.h"
 #include <random>
 
+const int iterationAmount=1000;
+const bool print_debug=false; 
+
 void recordTime(std::vector<benchmark_result>* ret, std::chrono::_V2::system_clock::time_point* start, std::string name){
     std::chrono::duration<double> duration = std::chrono::high_resolution_clock::now() - *start;
     ret->push_back(benchmark_result(name,duration.count()));
     *start=std::chrono::high_resolution_clock::now();
 }
+
 // list of benchmarks 
 // test1 allocate page
 std::vector<benchmark_result>* benchmarkAllocatePage(){
     std::vector<benchmark_result>* ret=new std::vector<benchmark_result>();
     create_dir("benchdir");
 
-    std::cout<<"Created outDir"<<std::endl;
+    if(print_debug){std::cout<<"Created outDir"<<std::endl;}
 
     auto bench_file = std::make_shared<paged_file>();
 
-    std::cout<<"Made file"<<std::endl;
+    if(print_debug){std::cout<<"Made file"<<std::endl;}
 
     bench_file->open_("benchdir/benches.db", 0);
 
-    std::cout<<"Created dbFile"<<std::endl;
+    if(print_debug){std::cout<<"Created dbFile"<<std::endl;}
 
     auto start = std::chrono::high_resolution_clock::now();
     auto mid=std::chrono::high_resolution_clock::now();
@@ -47,7 +51,7 @@ std::vector<benchmark_result>* benchmarkAllocatePage(){
     std::chrono::duration<double> duration = std::chrono::high_resolution_clock::now() - start;
     recordTime(ret,&start,"Total");
     
-    std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;
+    if(print_debug){std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;}
     
     return ret;
 }
@@ -56,15 +60,15 @@ std::vector<benchmark_result>* benchmarkAllocateAndWriteAllPages(){
     std::vector<benchmark_result>* ret = new std::vector<benchmark_result>();
     create_dir("benchdir");
 
-    std::cout << "Created outDir" << std::endl;
+    if(print_debug){std::cout << "Created outDir" << std::endl;}
 
     auto bench_file = std::make_shared<paged_file>();
 
-    std::cout << "Made file" << std::endl;
+    if(print_debug){std::cout << "Made file" << std::endl;}
 
     bench_file->open_("benchdir/benches.db", 0);
 
-    std::cout << "Created dbFile" << std::endl;
+    if(print_debug){std::cout << "Created dbFile" << std::endl;}
 
     auto start = std::chrono::high_resolution_clock::now();
     auto mid = std::chrono::high_resolution_clock::now();
@@ -95,7 +99,7 @@ std::vector<benchmark_result>* benchmarkAllocateAndWriteAllPages(){
 
     std::chrono::duration<double> duration = std::chrono::high_resolution_clock::now() - start;
     recordTime(ret,&start,"Total");
-    std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;
+    if(print_debug){std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;}
 
     return ret;
 }
@@ -104,15 +108,15 @@ std::vector<benchmark_result>* benchmarkAllocateWriteDeletePages(){
     std::vector<benchmark_result>* ret = new std::vector<benchmark_result>();
     create_dir("benchdir");
 
-    std::cout << "Created outDir" << std::endl;
+    if(print_debug){std::cout << "Created outDir" << std::endl;}
 
     auto bench_file = std::make_shared<paged_file>();
 
-    std::cout << "Made file" << std::endl;
+    if(print_debug){std::cout << "Made file" << std::endl;}
 
     bench_file->open_("benchdir/benches.db", 0);
 
-    std::cout << "Created dbFile" << std::endl;
+    if(print_debug){std::cout << "Created dbFile" << std::endl;}
 
     auto start = std::chrono::high_resolution_clock::now();
     auto mid = std::chrono::high_resolution_clock::now();
@@ -155,7 +159,7 @@ std::vector<benchmark_result>* benchmarkAllocateWriteDeletePages(){
 
     std::chrono::duration<double> duration = std::chrono::high_resolution_clock::now() - start;
     recordTime(ret,&start,"Total");
-    std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;
+    if(print_debug){std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;}
 
     return ret;
 }
@@ -164,15 +168,15 @@ std::vector<benchmark_result>* benchmarkDeleteAllPages(){
     std::vector<benchmark_result>* ret = new std::vector<benchmark_result>();
     create_dir("benchdir");
 
-    std::cout << "Created outDir" << std::endl;
+    if(print_debug){std::cout << "Created outDir" << std::endl;}
 
     auto bench_file = std::make_shared<paged_file>();
 
-    std::cout << "Made file" << std::endl;
+    if(print_debug){std::cout << "Made file" << std::endl;}
 
     bench_file->open_("benchdir/benches.db", 0);
 
-    std::cout << "Created dbFile" << std::endl;
+    if(print_debug){std::cout << "Created dbFile" << std::endl;}
 
     auto start = std::chrono::high_resolution_clock::now();
     auto mid = std::chrono::high_resolution_clock::now();
@@ -196,7 +200,7 @@ std::vector<benchmark_result>* benchmarkDeleteAllPages(){
 
     std::chrono::duration<double> duration = std::chrono::high_resolution_clock::now() - start;
     recordTime(ret,&start,"Total");
-    std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;
+    if(print_debug){std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;}
 
     return ret;
 }
@@ -205,15 +209,15 @@ std::vector<benchmark_result>* benchmarkAllocateWriteReadPages(){
     std::vector<benchmark_result>* ret = new std::vector<benchmark_result>();
     create_dir("benchdir");
 
-    std::cout << "Created outDir" << std::endl;
+    if(print_debug){std::cout << "Created outDir" << std::endl;}
 
     auto bench_file = std::make_shared<paged_file>();
 
-    std::cout << "Made file" << std::endl;
+    if(print_debug){std::cout << "Made file" << std::endl;}
 
     bench_file->open_("benchdir/benches.db", 0);
 
-    std::cout << "Created dbFile" << std::endl;
+    if(print_debug){std::cout << "Created dbFile" << std::endl;}
 
     auto start = std::chrono::high_resolution_clock::now();
     auto mid = std::chrono::high_resolution_clock::now();
@@ -257,7 +261,7 @@ std::vector<benchmark_result>* benchmarkAllocateWriteReadPages(){
 
     std::chrono::duration<double> duration = std::chrono::high_resolution_clock::now() - start;
     recordTime(ret,&start,"Total");
-    std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;
+    if(print_debug){std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;}
 
     return ret;
 
@@ -267,15 +271,15 @@ std::vector<benchmark_result>* benchmarkAllocateWriteReadDeletePages(){
     std::vector<benchmark_result>* ret = new std::vector<benchmark_result>();
     create_dir("benchdir");
 
-    std::cout << "Created outDir" << std::endl;
+    if(print_debug){std::cout << "Created outDir" << std::endl;}
 
     auto bench_file = std::make_shared<paged_file>();
 
-    std::cout << "Made file" << std::endl;
+    if(print_debug){std::cout << "Made file" << std::endl;}
 
     bench_file->open_("benchdir/benches.db", 0);
 
-    std::cout << "Created dbFile" << std::endl;
+    if(print_debug){std::cout << "Created dbFile" << std::endl;}
 
     auto start = std::chrono::high_resolution_clock::now();
     auto mid = std::chrono::high_resolution_clock::now();
@@ -310,7 +314,7 @@ std::vector<benchmark_result>* benchmarkAllocateWriteReadDeletePages(){
     // Read all pages
     for (auto i = 1u; i <= 1000; i++) {
         auto p = bp.fetch_page(i);
-        volatile int read_val = p->payload[0]; // Simulate read operation
+        volatile int iterationAmount=1000; int read_val = p->payload[0]; // Simulate read operation
         (void)read_val; // Avoid unused variable warning
     }
 
@@ -325,7 +329,7 @@ std::vector<benchmark_result>* benchmarkAllocateWriteReadDeletePages(){
 
     std::chrono::duration<double> duration = std::chrono::high_resolution_clock::now() - start;
     recordTime(ret,&start,"Total");
-    std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;
+    if(print_debug){std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;}
 
     return ret;
 }
@@ -334,15 +338,15 @@ std::vector<benchmark_result>* benchmarkAllocateWriteReadWriteReadPages(){
     std::vector<benchmark_result>* ret = new std::vector<benchmark_result>();
     create_dir("benchdir");
 
-    std::cout << "Created outDir" << std::endl;
+    if(print_debug){std::cout << "Created outDir" << std::endl;}
 
     auto bench_file = std::make_shared<paged_file>();
 
-    std::cout << "Made file" << std::endl;
+    if(print_debug){std::cout << "Made file" << std::endl;}
 
     bench_file->open_("benchdir/benches.db", 0);
 
-    std::cout << "Created dbFile" << std::endl;
+    if(print_debug){std::cout << "Created dbFile" << std::endl;}
     
 
 
@@ -411,40 +415,48 @@ std::vector<benchmark_result>* benchmarkAllocateWriteReadWriteReadPages(){
     
     std::chrono::duration<double> duration = std::chrono::high_resolution_clock::now() - start;
     recordTime(ret,&start,"Total");
-    std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;
+    if(print_debug){std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;}
     
 
     return ret;
 }
 // test8 read all files
 std::vector<benchmark_result>* benchmarkReadAllPages(){
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(1, 10000);
+
     std::vector<benchmark_result>* ret = new std::vector<benchmark_result>();
     create_dir("benchdir");
 
-    std::cout << "Created outDir" << std::endl;
+    if(print_debug){std::cout << "Created outDir" << std::endl;}
 
     auto bench_file = std::make_shared<paged_file>();
 
-    std::cout << "Made file" << std::endl;
+    if(print_debug){std::cout << "Made file" << std::endl;}
 
     bench_file->open_("benchdir/benches.db", 0);
 
-    std::cout << "Created dbFile" << std::endl;
+    if(print_debug){std::cout << "Created dbFile" << std::endl;}
 
     const size_t BUFFER_SIZE = 500; // Adjust based on system capabilities
     bufferpool bp(BUFFER_SIZE);
     bp.register_file(0, bench_file);
 
     // Allocate pages
-    for (auto i = 0u; i < 1000; i++)
+    for (auto i = 0u; i < iterationAmount; i++)
         bp.allocate_page(0ul);
         
     // Write random input to all pages
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(1, 10000);
 
-    for (auto i = 1u; i <= 1000; i++) {
+    // for (auto i = 1u; i <= 1000; i++) {
+    //     auto p = bp.fetch_page(i);
+    //     for (size_t j = 0; j < sizeof(p->payload); j++) {
+    //         p->payload[j] = dis(gen);
+    //     }
+    //     bp.mark_dirty(i);
+    // }
+    for (auto i = 1u; i <= iterationAmount; i++) {
         auto p = bp.fetch_page(i);
         for (size_t j = 0; j < sizeof(p->payload); j++) {
             p->payload[j] = dis(gen);
@@ -458,53 +470,74 @@ std::vector<benchmark_result>* benchmarkReadAllPages(){
     auto mid = std::chrono::high_resolution_clock::now();
 
     // Read all pages
-    for (auto i = 1u; i <= 1000; i++) {
+    // for (auto i = 1u; i <= 1000; i++) {
+    //     auto p = bp.fetch_page(i);
+    //     volatile int read_val = p->payload[0]; // Simulate read operation
+    //     (void)read_val; // Avoid unused variable warning
+    // }
+
+    // recordTime(ret,&mid,"Read");
+    for (auto i = 1u; i <= iterationAmount; i++) {
         auto p = bp.fetch_page(i);
         volatile int read_val = p->payload[0]; // Simulate read operation
         (void)read_val; // Avoid unused variable warning
+        recordTime(ret,&mid,"Read");
     }
-
-    recordTime(ret,&mid,"Read");
 
     std::chrono::duration<double> duration = std::chrono::high_resolution_clock::now() - start;
     recordTime(ret,&start,"Total");
-    std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;
+    if(print_debug){std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;}
 
     return ret;
 }
 // test9 read all files, delete all files
 std::vector<benchmark_result>* benchmarkReadAndDeleteAllPages(){
+    
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(1, 10000);
+
     std::vector<benchmark_result>* ret = new std::vector<benchmark_result>();
     create_dir("benchdir");
 
-    std::cout << "Created outDir" << std::endl;
+    if(print_debug){std::cout << "Created outDir" << std::endl;}
 
     auto bench_file = std::make_shared<paged_file>();
 
-    std::cout << "Made file" << std::endl;
+    if(print_debug){std::cout << "Made file" << std::endl;}
 
     bench_file->open_("benchdir/benches.db", 0);
 
-    std::cout << "Created dbFile" << std::endl;
+    if(print_debug){std::cout << "Created dbFile" << std::endl;}
 
     const size_t BUFFER_SIZE = 500; // Adjust based on system capabilities
     bufferpool bp(BUFFER_SIZE);
     bp.register_file(0, bench_file);
 
     // Allocate pages
-    for (auto i = 0u; i < 1000; i++)
+    for (auto i = 0u; i < iterationAmount; i++)
         bp.allocate_page(0ul);
 
     auto start = std::chrono::high_resolution_clock::now();
     auto mid = std::chrono::high_resolution_clock::now();
-
+    //Write all pages
+    for (auto i = 1u; i <= iterationAmount; i++) {
+        auto p = bp.fetch_page(i);
+        for (size_t j = 0; j < sizeof(p->payload); j++) {
+            p->payload[j] = dis(gen);
+        }
+        bp.mark_dirty(i);
+        recordTime(ret,&mid,"Write");
+    }
+    
     // Read all pages
-    for (auto i = 1u; i <= 1000; i++) {
+    for (auto i = 1u; i <= iterationAmount; i++) {
         auto p = bp.fetch_page(i);
         volatile int read_val = p->payload[0]; // Simulate read operation
         (void)read_val; // Avoid unused variable warning
+        recordTime(ret,&mid,"Read");
     }
-    recordTime(ret,&mid,"Read");
+    
 
     // Delete all pages
     for (auto i = 1u; i <= 1000; i++) {
@@ -515,48 +548,58 @@ std::vector<benchmark_result>* benchmarkReadAndDeleteAllPages(){
 
     std::chrono::duration<double> duration = std::chrono::high_resolution_clock::now() - start;
     recordTime(ret,&start,"Total");
-    std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;
+    if(print_debug){std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;}
 
     return ret;
 }
 // test10 write all files 
 std::vector<benchmark_result>* benchmarkWriteAllPages(){
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(1, 10000);
+
     std::vector<benchmark_result>* ret = new std::vector<benchmark_result>();
     create_dir("benchdir");
 
-    std::cout << "Created outDir" << std::endl;
+    if(print_debug){std::cout << "Created outDir" << std::endl;}
 
     auto bench_file = std::make_shared<paged_file>();
 
-    std::cout << "Made file" << std::endl;
+    if(print_debug){std::cout << "Made file" << std::endl;}
 
     bench_file->open_("benchdir/benches.db", 0);
 
-    std::cout << "Created dbFile" << std::endl;
+    if(print_debug){std::cout << "Created dbFile" << std::endl;}
 
     const size_t BUFFER_SIZE = 500; // Adjust based on system capabilities
     bufferpool bp(BUFFER_SIZE);
     bp.register_file(0, bench_file);
     // Allocate pages
-    for (auto i = 0u; i < 1000; i++)
+    for (auto i = 0u; i < iterationAmount; i++) {
         bp.allocate_page(0ul);
-
+    }
     auto start = std::chrono::high_resolution_clock::now();
     auto mid = std::chrono::high_resolution_clock::now();
 
     // Write random input to all pages
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(1, 10000);
+    
+    // for (auto i = 1u; i <= 1000; i++) {
+    //     auto p = bp.fetch_page(i);
+    //     for (size_t j = 0; j < sizeof(p->payload); j++) {
+    //         p->payload[j] = dis(gen);
+    //     }
+    //     bp.mark_dirty(i);
+    // }
+    // recordTime(ret,&mid,"Write");
 
-    for (auto i = 1u; i <= 1000; i++) {
+    for (auto i = 1u; i <= iterationAmount; i++) {
         auto p = bp.fetch_page(i);
         for (size_t j = 0; j < sizeof(p->payload); j++) {
             p->payload[j] = dis(gen);
         }
         bp.mark_dirty(i);
+        recordTime(ret,&mid,"Write");
     }
-    recordTime(ret,&mid,"Write");
     
     bp.flush_all();
 
@@ -564,7 +607,7 @@ std::vector<benchmark_result>* benchmarkWriteAllPages(){
 
     std::chrono::duration<double> duration = std::chrono::high_resolution_clock::now() - start;
     recordTime(ret,&start,"Total");
-    std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;
+    if(print_debug){std::cout << "Elapsed time: " << duration.count() << "s" << std::endl;}
 
     return ret;
 }

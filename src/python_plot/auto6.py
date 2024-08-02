@@ -27,11 +27,11 @@ def plot_comparison(data_set1, data_set2, output_file):
     labels2, values2 = zip(*data_set2)
     plt.plot(labels2, values2, label='Benchmark2', marker='x')
 
-    plt.title('Operation Times Comparison', fontsize=20)
-    plt.xlabel('Operations', fontsize=16)
-    plt.ylabel('Time (s)', fontsize=16)
-    plt.xticks(rotation=45, fontsize=14)
-    plt.yticks(fontsize=14)
+    plt.title('Operation Times Comparison', fontsize=24)
+    plt.xlabel('Operations', fontsize=20)
+    plt.ylabel('Time (s)', fontsize=20)
+    plt.xticks(rotation=45, fontsize=20)
+    plt.yticks(fontsize=20)
     plt.grid(axis='y')
     plt.legend(fontsize=12)
     plt.tight_layout()  # Ensure everything fits without overlap
